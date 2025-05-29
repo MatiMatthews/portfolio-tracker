@@ -1,0 +1,19 @@
+node_modules/
+.env*
+.next/
+.DS_Store
+*.log
+*.tsbuildinfo
+.vscode/
+.zsh_sessions
+.Trash/
+Library/
+Library/Containers/
+Library/Caches/
+Library/Group Containers/
+Desktop/
+Downloads/
+Applications/
+*.dmg
+*.mp4
+*.zip
