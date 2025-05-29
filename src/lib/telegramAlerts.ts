@@ -2,7 +2,7 @@ import yahooFinance from 'yahoo-finance2';
 declare module 'node-telegram-bot-api';
 import TelegramBot from 'node-telegram-bot-api';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from './firebase';
+import db from './firebase';
 
 const botToken = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;
