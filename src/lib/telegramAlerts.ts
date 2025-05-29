@@ -1,7 +1,8 @@
 import yahooFinance from 'yahoo-finance2';
+declare module 'node-telegram-bot-api';
 import TelegramBot from 'node-telegram-bot-api';
 import { collection, getDocs } from 'firebase/firestore';
-import db from './firebase';
+import { db } from './firebase';
 
 const botToken = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -34,7 +35,7 @@ const checkStockAlerts = async () => {
       const { ticker, averageBuyPrice, targetEntry, targetExit } = stock;
       try {
         const quote = await yahooFinance.quote(ticker);
-        const currentPrice = quote.regularMarketPrice;
+        const currentPrice = quote[0]?.regularMarketPrice;
 
         console.log(`Ticker: ${ticker}, Current Price: $${currentPrice}`);
 

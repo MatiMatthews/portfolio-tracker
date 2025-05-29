@@ -54,6 +54,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
    - `TELEGRAM_BOT_TOKEN`
    - `TELEGRAM_CHAT_ID`
 
+## Environment Variables
+
+To set up Firebase, duplicate the `.env.local.example` file as `.env.local` and fill in the values with your actual Firebase configuration. This file is required for the application to function correctly.
+
 ### Starting the App
 1. After deployment, Vercel will automatically build and start the app.
 2. Visit the provided URL to view your application.
